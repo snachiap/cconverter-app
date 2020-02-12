@@ -18,7 +18,7 @@ const Summary = () => {
             iconType="logoGithub"
             target="_blank"
             onClick={() => { }}
-            href="http" />
+            href="https://github.com/snachiap/cconverter" />
             <ul>
               <li> <EuiTextColor color="subdued">Used EhCache </EuiTextColor></li>
               <li> <EuiTextColor color="subdued">Used interface design pattern </EuiTextColor></li>
@@ -63,7 +63,22 @@ const Summary = () => {
           </li>
           <li>
             <EuiTextColor color="subdued">
+              {'CSP meta to block script. Not styles'}
+            </EuiTextColor>
+          </li>
+          <li>
+            <EuiTextColor color="subdued">
               {'Deployed to Heroku'}
+            </EuiTextColor>
+          </li>
+        </ui>
+
+
+        <h5>Whats NOT accomplished</h5>
+        <ui>
+          <li>
+            <EuiTextColor color="subdued">
+              {'Instrumentation has not been added. Frankly, I have not dont this and no before hand experience.'}
             </EuiTextColor>
           </li>
         </ui>

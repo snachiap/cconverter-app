@@ -23,6 +23,7 @@ const Summary = () => {
               <li> <EuiTextColor color="subdued">Used EhCache </EuiTextColor></li>
               <li> <EuiTextColor color="subdued">Used interface design pattern </EuiTextColor></li>
               <li> <EuiTextColor color="subdued">CSRF security enabled with cookie storage policy </EuiTextColor></li>
+              <li> <EuiTextColor color="subdued">React App is served as a static files. This is done just for deployment purpose </EuiTextColor></li>
             </ul>
           </li>
         </ui>

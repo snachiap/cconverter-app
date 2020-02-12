@@ -39,6 +39,35 @@ const Summary = () => {
           </ul>
         </ui>
 
+        <h5>Whats accomplished</h5>
+        <ui>
+          <li>
+            <EuiTextColor color="subdued">
+              {'Web i18n framework added to the UI, but not from the API level.'}
+            </EuiTextColor>
+          </li>
+          <li>
+            <EuiTextColor color="subdued">
+              {`Server-Timing - added using`}
+            </EuiTextColor>
+            <EuiButtonIcon
+              iconType="logoGithub"
+              target="_blank"
+              onClick={() => { }}
+              href="https://github.com/sercasti/spring-servertimings-example" />
+          </li>
+          <li>
+            <EuiTextColor color="subdued">
+              {'CSRF added with Cookie storage policy'}
+            </EuiTextColor>
+          </li>
+          <li>
+            <EuiTextColor color="subdued">
+              {'Deployed to Heroku'}
+            </EuiTextColor>
+          </li>
+        </ui>
+
         <h4>Sample below</h4>
       </EuiText>
     </Fragment>

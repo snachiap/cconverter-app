@@ -5,6 +5,7 @@ import { EuiFlexItem, EuiComboBox } from '@elastic/eui';
 import axios from 'axios';
 import { EuiFieldNumber } from '@elastic/eui';
 import { EuiButtonIcon } from '@elastic/eui';
+import { EuiStat } from '@elastic/eui';
 const API = axios.create({});
 
 
@@ -46,7 +47,6 @@ const Converter = () => {
         <EuiFlexItem grow={false}>
           <EuiFieldNumber
             min={1}
-            max={1000000000000}
             defaultValue={value}
             onChange={e => {
               setValue(e.target.value);
@@ -92,16 +92,32 @@ const Converter = () => {
       </EuiFlexGroup>
       {
         (destCurrency && result > 0) ?
-          <EuiFlexGroup  justifyContent="center">
+          <EuiFlexGroup justifyContent="center">
             <EuiFlexItem grow={false}>
-              {new Intl.NumberFormat('en-GB', { style: 'currency', currency: baseCurrency }).format(value)}
-              { ' --> ' }
-              {new Intl.NumberFormat('en-GB', { style: 'currency', currency: destCurrency }).format(result)}
+              <EuiStat
+                title={new Intl.NumberFormat('en-GB', { style: 'currency', currency: baseCurrency }).format(value)}
+                textAlign="left"
+                titleSize="m"
+                titleColor="secondary">
+              </EuiStat>
+            </EuiFlexItem>
+            <EuiFlexItem grow={false}>
+              <EuiStat title={'>'}
+                textAlign="right"
+                titleSize="m"
+                titleColor="secondary">
+              </EuiStat>
+            </EuiFlexItem>
+            <EuiFlexItem grow={false}>
+              <EuiStat
+                title={new Intl.NumberFormat('en-GB', { style: 'currency', currency: destCurrency }).format(result)}
+                textAlign="right"
+                titleSize="m"
+                titleColor="secondary">
+              </EuiStat>
             </EuiFlexItem>
           </EuiFlexGroup> : null
       }
-
-
     </Fragment>
   )
 }
